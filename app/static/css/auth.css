@@ -1,0 +1,72 @@
+
+/* Стили для страницы логина */
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-form {
+    background-color: var(--main-color);
+    padding: 20px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.input-field {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--back-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--rounder-border-radius);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.input-field:focus {
+    border-color: var(--blue-color);
+    outline: none;
+}
+
+.submit-button {
+    background-color: var(--blue-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--rounder-border-radius);
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--active-color);
+}
+
+.message {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.register-link {
+    color: var(--blue-color);
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 14px;
+}

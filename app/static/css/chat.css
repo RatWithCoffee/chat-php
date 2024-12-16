@@ -1,0 +1,242 @@
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+.file-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--border-color); /* Использование цвета границ */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-blue-color); /* Темный синий фон */
+    color: var(--text-color); /* Белый цвет текста */
+    padding: 15px 25px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--blue-color); /* Новый основной цвет */
+    color: var(--text-color); /* Белый цвет текста */
+    border-radius: var(--rounder-border-radius); /* Радиус для кнопки */
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+    background-color: var(--active-color); /* Новый цвет при наведении */
+}
+
+#to-user-header {
+    cursor: pointer;
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 80%;
+    margin: 80px auto 20px;
+    padding: 20px;
+    background-color: var(--main-color); /* Новый основной фон */
+    border-radius: var(--border-radius); /* Радиус для контейнера */
+}
+
+.message {
+    background-color: var(--border-color); /* Новый фон сообщений */
+    border: 1px solid var(--border-color); /* Цвет границы */
+    border-radius: 20px; /* Увеличенный радиус для округленных углов */
+    padding: 15px;
+    margin: 12px 0;
+    max-width: 450px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.message:hover {
+    transform: scale(1.02);
+    background-color: var(--active-color); /* Изменение фона при наведении */
+}
+
+.message__author {
+    font-weight: bold;
+    color: var(--text-color); /* Белый цвет для автора */
+    margin-bottom: 6px;
+}
+
+.message__text {
+    color: var(--border-color); /* Цвет текста сообщения */
+    line-height: 1.6;
+}
+
+.message_my {
+    background: var(--active-color); /* Новый цвет для сообщений пользователя */
+    color: var(--text-color); /* Белый цвет текста */
+}
+
+.text-chat {
+    .text-chat--container {
+        margin-bottom: 1.5rem;
+        padding: 0 1.5em;
+        display: grid;
+        grid-template-columns: 3em auto 6em;
+        grid-template-areas: "col1 col2 col3";
+        gap: 0.6em;
+        font-family: "Arial", sans-serif;
+        position: relative;
+    }
+
+    .text-chat--image {
+    }
+
+    .text-chat--text {
+        background-color: var(--blue-color); /* Новый основной цвет для текста */
+        color: var(--text-color);
+        border-radius: 2em;
+        padding: 1em;
+        font-size: 14px;
+        max-width: 80%; /* Ограничение ширины текста */
+    }
+}
+
+.text-chat--container {
+    align-items: center;
+}
+
+.text-chat--text {
+    grid-area: col2;
+}
+
+.other-text-chat--unread-dot {
+    width: 14px;
+    height: 14px;
+    margin-right: auto;
+    margin-left: 0.6em;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    grid-area: col3;
+    justify-self: end;
+}
+
+.text-chat.text-chat_reply {
+    .text-chat--container {
+        grid-template-columns: 6em auto 3em;
+    }
+
+    .text-chat--text {
+        background-color: var(--back-color);
+    }
+
+    .text-chat--unread-dot {
+        width: 14px;
+        height: 14px;
+        background-color: var(--blue-color);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 6em;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.new-msg-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.textarea-msg {
+    background-color: var(--back-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 12px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    resize: none;
+    width: 80%;
+    box-sizing: border-box;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition: border-color 0.3s;
+}
+
+.textarea-msg:focus {
+    outline: none;
+    border-color: var(--blue-color); /* Цвет границы при фокусе */
+}
+
+.button-send {
+    background-color: var(--blue-color);
+    color: var(--text-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-send:hover {
+    background-color: var(--active-color); /* Новый цвет при наведении */
+}
+
+/* Стили для кнопки добавления файла */
+input[type="file"] {
+    display: none; /* Скрыть стандартную кнопку */
+}
+
+input[type="file"] + label {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--blue-color); /* Новый основной цвет */
+    color: var(--text-color); /* Белый цвет текста */
+    border-radius: var(--rounder-border-radius); /* Радиус для кнопки */
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]:hover + label {
+    background-color: var(--active-color); /* Новый цвет при наведении */
+}
+
+input[type="file"]:focus + label {
+    outline: 2px solid var(--blue-color); /* Цвет рамки при фокусе */
+}
+
+/* Дополнительный стиль для отображения имени файла */
+.file-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--border-color); /* Использование цвета границ */
+}

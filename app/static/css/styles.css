@@ -1,0 +1,132 @@
+:root {
+    --blue-color: #118943; /* Новый основной цвет */
+    --dark-blue-color: #2c3e50; /* Новый темный синий */
+    --main-color: #2f3640; /* Новый основной фон */
+    --active-color: #27ae60; /* Новый цвет для активных элементов */
+    --back-color: #1c1c1c; /* Новый цвет фона */
+    --border-color: #95a5a6; /* Новый цвет границ */
+    --text-color: #ecf0f1; /* Новый цвет текста */
+    --border-radius: 10px; /* Радиус для углов */
+    --rounder-border-radius: 8px; /* Радиус для округленных элементов */
+    --error-color: #e74c3c; /* Новый цвет ошибки */
+    --hover-color: ##7ae60; /* Новый цвет при наведении */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue-color); /* Цвет ссылок */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue-color);
+    padding: 15px 25px;
+    gap: 120px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.header div {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.header-text {
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавный переход */
+}
+
+.header-text:hover {
+    color: var(--hover-color); /* Меняется цвет текста */
+    transform: scale(1.1); /* Увеличение размера */
+}
+
+.img-small {
+    border-radius: 50%;
+    width: 3rem; /* Увеличен размер */
+    height: 3rem; /* Увеличен размер */
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: var(--blue-color);
+    border: 0;
+    padding: 18px 25px;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: var(--rounder-border-radius);
+}
+
+button:hover {
+    background: var(--active-color);
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+button:active {
+    background: #2980b9;
+    transform: scale(0.98); /* Уменьшение при нажатии */
+}
+
+.error-text {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+body {
+    background: var(--main-color);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--back-color);
+    border-radius: var(--rounder-border-radius);
+}
+
+.card {
+    background-color: var(--back-color);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: var(--rounder-border-radius);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: var(--rounder-border-radius);
+    border: 1px solid var(--border-color);
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: var(--blue-color);
+    outline: none;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+

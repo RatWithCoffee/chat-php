@@ -1,0 +1,52 @@
+.main-table {
+    width: 80%;
+    margin-top: 10em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-collapse: collapse;
+    background-color: var(--main-color); /* Фон таблицы */
+    color: var(--text-color); /* Цвет текста */
+    border-radius: var(--border-radius); /* Радиус для углов таблицы */
+    border: 3px solid var(----border-color); 
+}
+
+.main-table th, .main-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--border-color); /* Цвет границ */
+}
+
+.main-table th {
+    background-color: var(--dark-blue-color); /* Темный фон для заголовков */
+    color: var(--text-color); /* Белый цвет для текста в заголовках */
+    font-weight: bold;
+}
+
+.main-table tr {
+    background-color: var(--back-color); /* Фон для четных строк */
+}
+
+
+.main-table tr:hover {
+    background-color: var(--blue-color); /* Цвет фона при наведении */
+}
+
+.main-table td a {
+    color: var(--blue-color); /* Цвет ссылок */
+    text-decoration: none;
+}
+
+.main-table td a:hover {
+    color: var(--active-color); /* Цвет ссылки при наведении */
+}
+
+
+
+.main-table td a, .main-table th a {
+    color: var(--text-color); /* Белый цвет для ссылок в таблице */
+    text-decoration: none;
+}
+
+.main-table td a:hover, .main-table th a:hover {
+    color: var(--hover-color); /* Цвет ссылки при наведении */
+}
