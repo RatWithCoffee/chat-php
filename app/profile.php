@@ -28,6 +28,7 @@ if ($result_user->num_rows > 0) {
     echo "Пользователь не найден.";
     exit();
 }
+include('header.php');
 ?>
 
 <!DOCTYPE html>
@@ -36,21 +37,32 @@ if ($result_user->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/profile.css">
 </head>
 <body>
 
-    <h1>Профиль пользователя</h1>
-    <div>
-        <p><strong>Аватар:</strong> <img src="/<?php echo $user['avatar']; ?>" alt="Avatar" width="100"></p>
-        <p><strong>Фамилия:</strong> <?php echo $user['surname']; ?></p>
-        <p><strong>Имя:</strong> <?php echo $user['name']; ?></p>
-        <p><strong>Отчество:</strong> <?php echo $user['patronymic']; ?></p>
-        <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
-        <p><strong>Дата рождения:</strong> <?php echo $user['birthday']; ?></p>
-        <p><strong>Город:</strong> <?php echo $user['city_name']; ?></p>
-        <p><strong>Дата регистрации:</strong> <?php echo $user['registration']; ?></p>
-        <p><strong>Логин:</strong> <?php echo $user['login']; ?></p>
+<div class="container">
+        <h1>Профиль пользователя</h1>
+
+        <div class="profile-card">
+            <div class="avatar">
+                <img src="/<?php echo $user['avatar']; ?>" alt="Avatar" width="350">
+            </div>
+            
+            <div class="user-info">
+                <p><strong>Фамилия:</strong> <?php echo $user['surname']; ?></p>
+                <p><strong>Имя:</strong> <?php echo $user['name']; ?></p>
+                <p><strong>Отчество:</strong> <?php echo $user['patronymic']; ?></p>
+                <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
+                <p><strong>Дата рождения:</strong> <?php echo $user['birthday']; ?></p>
+                <p><strong>Город:</strong> <?php echo $user['city_name']; ?></p>
+                <p><strong>Дата регистрации:</strong> <?php echo $user['registration']; ?></p>
+                <p><strong>Логин:</strong> <?php echo $user['login']; ?></p>
+            </div>
+        </div>
     </div>
+
 
 </body>
 </html>

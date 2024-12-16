@@ -24,7 +24,6 @@ a {
 .header {
     display: flex;
     align-items: center;
-    background-color: var(--blue-color);
     padding: 15px 25px;
     gap: 120px;
     border-bottom: 2px solid var(--border-color);
