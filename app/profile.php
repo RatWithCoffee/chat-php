@@ -8,6 +8,7 @@ preg_match('/profile\/(\d+)/', $current_url, $matches);
 if (isset($matches[1])) {
     $user_id = $matches[1]; // Извлекаем ID пользователя из URL
 } else {
+    // если id нет - берем id текущего пользователя из сессии
     $user_id = intval($_SESSION['id_user']);
 }
 

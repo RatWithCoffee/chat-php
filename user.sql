@@ -1,6 +1,6 @@
   -- Удаление таблиц, если они существуют
-  DROP TABLE IF EXISTS users;
   DROP TABLE IF EXISTS city;
+  DROP TABLE IF EXISTS users;
   DROP TABLE IF EXISTS message;
 
   -- Создание таблицы city
@@ -44,7 +44,7 @@
         from_user    INT,
         to_user      INT,
         sending_time TIMESTAMP NOT NULL,
-        `read`       TINYINT(1) NOT NULL,
+        `read`       TINYINT NOT NULL DEFAULT 0,
         img_name     VARCHAR(255) NOT NULL,
         FOREIGN KEY (from_user) REFERENCES users (id) ON DELETE CASCADE,
         FOREIGN KEY (to_user) REFERENCES users (id) ON DELETE CASCADE

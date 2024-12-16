@@ -1,9 +1,4 @@
 <?php
-// Проверка на ошибки подключения
-if ($conn->connect_error) {
-    die("Ошибка подключения: " . $conn->connect_error);
-}
-
 
 // Проверка, есть ли в сессии ID текущего пользователя
 if (!isset($_SESSION['id_user'])) {
@@ -30,7 +25,7 @@ if ($result_user->num_rows > 0) {
     echo "Пользователь не найден.";
     exit();
 }
-include('header.php');
+
 
 
 // SQL-запрос для получения всех пользователей, кроме текущего
@@ -43,6 +38,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $currentUserId);
 $stmt->execute();
 $result = $stmt->get_result();
+include('header.php');
 
 // Проверка, есть ли результаты
 if ($result->num_rows > 0) {

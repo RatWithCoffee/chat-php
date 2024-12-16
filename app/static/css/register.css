@@ -6,7 +6,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     flex-direction: column; /* Чтобы элементы могли располагаться по центру */
 }
@@ -31,7 +30,6 @@ input[type="password"],
 select {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
     background-color: var(--back-color);
     border: 1px solid var(--border-color);
     border-radius: var(--rounder-border-radius);
@@ -112,9 +110,3 @@ select {
     color: var(--border-color);
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 600px) {
-    form {
-        width: 90%;
-    }
-}
