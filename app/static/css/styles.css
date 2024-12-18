@@ -27,6 +27,7 @@ a {
     padding: 15px 25px;
     gap: 120px;
     border-bottom: 2px solid var(--border-color);
+    background-color: var(--dark-blue-color);
 }
 
 .header div {

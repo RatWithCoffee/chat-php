@@ -133,3 +133,20 @@ const getImgDiv = (base64file) => {
     </div>
 `;
 };
+
+/////////
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Получаем все сообщения
+//     const messages = document.querySelectorAll('.text-chat');
+
+//     messages.forEach(function(message) {
+//         message.addEventListener('click', function() {
+//             const messageId = message.getAttribute('data-id');
+//             alert('Вы кликнули на сообщение с ID: ' + messageId);
+
+//             // Здесь можно выполнить другие действия, например, отправить запрос на сервер
+//             // или показать дополнительные данные, связанные с сообщением.
+//         });
+//     });
+// });

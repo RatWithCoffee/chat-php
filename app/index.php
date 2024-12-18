@@ -21,6 +21,7 @@ $routes = [
     'profile' => 'profile.php',
     'register' => 'register.php',
     'login' => 'login.php',
+    'edit-profile' => 'edit-profile.php',
 ];
 
 $current_url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -32,6 +33,8 @@ if (isset($_SESSION['id_user'])) {
         include($routes['main']);
     } elseif (strpos($current_url, 'chat') !== false) {
         include($routes['chat']);
+    } elseif (strpos($current_url, 'edit-profile') !== false) {
+        include($routes['edit-profile']);
     } elseif (strpos($current_url, 'profile') !== false) {
         include($routes['profile']);
     } else {

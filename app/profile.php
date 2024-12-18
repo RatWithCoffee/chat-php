@@ -60,6 +60,7 @@ include('header.php');
                 <p><strong>Город:</strong> <?php echo $user['city_name']; ?></p>
                 <p><strong>Дата регистрации:</strong> <?php echo $user['registration']; ?></p>
                 <p><strong>Логин:</strong> <?php echo $user['login']; ?></p>
+                <button onclick="window.location.href='/edit-profile';">Редактирование профиля</button>
             </div>
         </div>
     </div>

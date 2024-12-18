@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message_text'])) {
 // Получение сообщений из базы данных
 $sql = "SELECT * FROM message WHERE (from_user = ? AND to_user = ?) OR (from_user = ? AND to_user = ?) ORDER BY sending_time ASC";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("iiii", $user_id, $to_user_id, $to_user_id, $user_id);
+$stmt->bind_param("iiii",$user_id, $to_user_id, $to_user_id, $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -87,7 +87,7 @@ $stmt->close();
         while ($row = $result->fetch_assoc()) {
             // Если сообщение от текущего пользователя
             if ($user_id == $row['from_user']) {
-                echo "<div class='text-chat text-chat_reply animate-fadeinup'>";
+                echo "<div class='text-chat text-chat_reply animate-fadeinup' data-id='" . $row['id'] . "'>";
                 echo "<div class='text-chat--container'>";
                 if (!$row["read"]) {
                     echo "<div class='text-chat--unread-dot'></div>";
@@ -108,7 +108,7 @@ $stmt->close();
                 echo "</div>";
             } else {
                 // Если сообщение от другого пользователя
-                echo "<div class='text-chat animate-fadeinup'>";
+                echo "<div class='text-chat animate-fadeinup data-id='" . $row['id'] . "''>";
                 echo "<div class='text-chat--container'>";
                 echo "<div class='text-chat--text'>";
                 echo "<p>" . htmlspecialchars($row['text']) . "</p>";

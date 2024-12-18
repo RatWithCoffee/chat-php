@@ -1,0 +1,198 @@
+/* Общие стили формы */
+.edit-form {
+    background-color: var(--back-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Поля формы в столбик */
+    gap: 15px; /* Отступы между элементами */
+}
+
+.edit-form:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.edit-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="email"],
+.edit-form input[type="date"],
+.edit-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--rounder-border-radius);
+    background-color: var(--back-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+    border-color: var(--blue-color);
+    box-shadow: 0 0 5px var(--blue-color);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--blue-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--rounder-border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--active-color);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1e8449;
+    transform: scale(0.98);
+}
+
+/* Стили для контейнера */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--main-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+/* Стили для ссылок */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--blue-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--active-color);
+    text-decoration: underline;
+}
+/* Общие стили формы */
+form {
+    background-color: var(--back-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Поля формы в столбик */
+    gap: 15px; /* Отступы между элементами */
+}
+
+form:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--rounder-border-radius);
+    background-color: var(--back-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: var(--blue-color);
+    box-shadow: 0 0 5px var(--blue-color);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--blue-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--rounder-border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--active-color);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1e8449;
+    transform: scale(0.98);
+}
+
+/* Стили для контейнера */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--main-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+/* Стили для ссылок */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--blue-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--active-color);
+    text-decoration: underline;
+}
