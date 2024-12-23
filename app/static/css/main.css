@@ -1,13 +1,55 @@
 .main-table {
     width: 80%;
-    margin-top: 10em;
-    margin-left: 1em;
-    margin-right: 1em;
     border-collapse: collapse;
     background-color: var(--main-color); /* Фон таблицы */
     color: var(--text-color); /* Цвет текста */
     border-radius: var(--border-radius); /* Радиус для углов таблицы */
-    border: 3px solid var(----border-color); 
+    border: 3px solid var(--border-color); 
+}
+
+
+.curr-user-info {
+    display: flex; /* Для горизонтального расположения элементов */
+    align-items: center; /* Выравнивание по вертикали */
+    gap: 15px; /* Расстояние между аватаром и текстом */
+    background-color: var(--dark-blue-color); /* Темный фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: var(--border-radius); /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для панели */
+    color: var(--text-color); /* Цвет текста */
+    max-width: 500px; /* Максимальная ширина */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.curr-user-info img {
+    border-radius: 50%; /* Круглый аватар */
+    border: 3px solid var(--border-color); /* Граница аватара */
+    width: 80px; /* Ширина аватара */
+    height: 80px; /* Высота аватара */
+    object-fit: cover; /* Сохранение пропорций изображения */
+}
+
+.curr-user-info .header-text {
+    font-size: 1.2em; /* Увеличенный размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer; /* Указатель при наведении */
+    text-align: left; /* Выравнивание текста */
+}
+
+.curr-user-info .header-text:hover {
+    color: var(--hover-color); /* Цвет текста при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+
+.curr-user-info {
+    background-color: var(--dark-blue-color);
+}
+
+.main-page-container {
+    margin-top: 8em;
+    margin-left: 3em;
+    margin-right: 1em;
 }
 
 .main-table th, .main-table td {

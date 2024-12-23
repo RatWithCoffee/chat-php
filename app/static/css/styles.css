@@ -1,15 +1,16 @@
 :root {
-    --blue-color: #118943; /* Новый основной цвет */
-    --dark-blue-color: #2c3e50; /* Новый темный синий */
-    --main-color: #2f3640; /* Новый основной фон */
-    --active-color: #27ae60; /* Новый цвет для активных элементов */
+    --blue-color: #7f3b89; /* Новый основной цвет */
+    --dark-blue-color: #4f0a73; /* Новый темный синий */
+    --main-color: #5c5c5c; /* Новый основной фон */
+    --active-color: #a94cb0; /* Новый цвет для активных элементов */
     --back-color: #1c1c1c; /* Новый цвет фона */
     --border-color: #95a5a6; /* Новый цвет границ */
-    --text-color: #ecf0f1; /* Новый цвет текста */
+    --text-color: #ebebeb; /* Новый цвет текста */
     --border-radius: 10px; /* Радиус для углов */
     --rounder-border-radius: 8px; /* Радиус для округленных элементов */
     --error-color: #e74c3c; /* Новый цвет ошибки */
-    --hover-color: ##7ae60; /* Новый цвет при наведении */
+    --hover-color: #a5a5a5; /* Новый цвет при наведении */
+    --dark-main-color: #8a8a8a; /* Новый цвет при наведении */
 }
 
 a:hover {
@@ -50,7 +51,9 @@ a {
     border-radius: 50%;
     width: 3rem; /* Увеличен размер */
     height: 3rem; /* Увеличен размер */
+    object-fit: cover;
 }
+
 
 button {
     font-family: "Roboto", sans-serif;

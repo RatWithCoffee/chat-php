@@ -1,13 +1,11 @@
 <?php
-if (isset($_POST['logout'])) {
-    session_destroy();
-    header("Location: /login");
-    exit();
-} 
 
-$error_message = ''; // Переменная для хранения сообщения об ошибке
+include("utils/start_settings.php");
+
 
 if (isset($_POST['login_submit'])) {
+    $error_message = ''; // Переменная для хранения сообщения об ошибке
+
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
     
@@ -20,8 +18,9 @@ if (isset($_POST['login_submit'])) {
         $user = $result->fetch_assoc();
         
         if ($user) {
+            session_start();
             $_SESSION['id_user'] = $user['id'];
-            header("Location: /main");
+            header("Location: /main.php");
             exit();
         } else {
             $error_message = 'Неверная почта или пароль';
@@ -50,7 +49,7 @@ if (isset($_POST['login_submit'])) {
             <input type="email" name="email" required class="input-field" placeholder="Почта"><br>
             <input type="password" name="password" required class="input-field" placeholder="Пароль"><br>
             <input type="submit" name="login_submit" value="Войти" class="submit-button"><br>
-            <p class="message">Не зарегистрированы? <a href="/register" class="register-link">Создайте аккаунт</a></p>
+            <p class="message">Не зарегистрированы? <a href="/register.php" class="register-link">Создайте аккаунт</a></p>
         </form>
     </div>
 </body>

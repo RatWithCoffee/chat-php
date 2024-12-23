@@ -6,7 +6,7 @@ const fileNameDisplay = document.getElementById('file-name');
 fileInput.addEventListener('change', function () {
     const fileName = fileInput.files[0] ? fileInput.files[0].name : ''; // Получаем имя файла
     if (fileName) {
-        fileNameDisplay.textContent = `Прикреплен файл: ${fileName}`; // Отображаем имя файла
+        fileNameDisplay.textContent = `Файл: ${fileName}`; // Отображаем имя файла
     } else {
         fileNameDisplay.textContent = ''; // Если файл не выбран, скрываем текст
     }
@@ -129,24 +129,7 @@ const getImgDiv = (base64file) => {
     }
     return `
     <div class="text-chat--image">
-        <img width="100px" height="100px" src="${base64file}"/>
+        <img onerror="this.onerror=null; this.src='/uploads/avatars/default_avatar.jpg"; width="100px" height="100px" src="${base64file}"/>
     </div>
 `;
 };
-
-/////////
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Получаем все сообщения
-//     const messages = document.querySelectorAll('.text-chat');
-
-//     messages.forEach(function(message) {
-//         message.addEventListener('click', function() {
-//             const messageId = message.getAttribute('data-id');
-//             alert('Вы кликнули на сообщение с ID: ' + messageId);
-
-//             // Здесь можно выполнить другие действия, например, отправить запрос на сервер
-//             // или показать дополнительные данные, связанные с сообщением.
-//         });
-//     });
-// });

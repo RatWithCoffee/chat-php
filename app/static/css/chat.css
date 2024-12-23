@@ -98,7 +98,7 @@
     color: var(--text-color); /* Белый цвет текста */
 }
 
-.text-chat {
+.text-chat {    
     .text-chat--container {
         margin-bottom: 1.5rem;
         padding: 0 1.5em;
@@ -136,7 +136,7 @@
     height: 14px;
     margin-right: auto;
     margin-left: 0.6em;
-    background-color: var(--blue-color);
+    background-color: var(--text-color);
     border-radius: 50%;
     grid-area: col3;
     justify-self: end;
@@ -154,7 +154,7 @@
     .text-chat--unread-dot {
         width: 14px;
         height: 14px;
-        background-color: var(--blue-color);
+        background-color: var(--text-color);
         border-radius: 50%;
         position: absolute;
         top: 50%;

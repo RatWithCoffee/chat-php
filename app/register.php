@@ -1,17 +1,5 @@
 <?php
-// Подключение к базе данных
-$servername = 'db';
-$username = 'rat';
-$password = 'rat';
-$dbname = 'db';
-$port = '3306';
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Проверка на ошибки подключения
-if ($conn->connect_error) {
-    die("Ошибка подключения: " . $conn->connect_error);
-}
+include("utils/start_settings.php");
 
 // Функция для получения значений из POST-запроса
 function getPostValue($key, &$error, $fieldName)
@@ -61,10 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['MySubmit'])) {
         } else {
             $err .= 'Недопустимый формат файла. Разрешены: jpg, jpeg, png<br>';
         }
-    } else {
-        $err .= 'Аватар не загружен<br>';
-    }
-
+    } 
     // Если нет ошибок, сохраняем данные в базу
     if (empty($err)) {
         $hashedPass = md5($Password); // Хеширование пароля
@@ -75,8 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['MySubmit'])) {
         
         if ($stmt->execute()) {
             $user_id = $conn->insert_id;
+            session_start();
             $_SESSION['id_user'] = $user_id;
-            header("Location: /main");
+            header("Location: /main.php");
             exit();
         } else {
             $err .= 'Ошибка при регистрации: ' . $stmt->error . '<br>';
